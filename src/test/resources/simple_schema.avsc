@@ -1,0 +1,10 @@
+{
+  "namespace": "com.fhuertas",
+  "type": "record",
+  "name": "sample_avro",
+  "fields" : [
+    {"name": "k1", "type": "string"},
+    {"name": "k2", "type":["null", "long"], "default": null},
+    {"name":"k3", "type":"long"}
+  ]
+}

@@ -9,6 +9,9 @@ lazy val root = (project in file(".")).
     )),
     name := "datafaker",
     libraryDependencies ++= Seq(
-      scalaTest % Test
+      avro4s,
+      scalaTest % Test,
+      scalaCheck % Test
+
     )
   )
