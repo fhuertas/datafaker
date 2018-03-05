@@ -1,7 +1,7 @@
 # Scala base
 
 [![Build Status](https://travis-ci.org/fhuertas/datafaker.svg?branch=master)](https://travis-ci.org/fhuertas/datafaker)
-
+[![Coverage Status](https://coveralls.io/repos/github/fhuertas/datafaker/badge.svg?branch=master)](https://coveralls.io/github/fhuertas/datafaker?branch=master)
 ## Description
 
 This project generate fake data. It is in progress
