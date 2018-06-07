@@ -1,0 +1,1 @@
+name := s"${Common.ModulesPrefix}-service"

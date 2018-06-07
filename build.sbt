@@ -1,17 +1,15 @@
-import Dependencies._
+import Common._
 
-lazy val root = (project in file(".")).
-  settings(
-    inThisBuild(List(
-      organization := "com.fhuertas",
-      scalaVersion := s"$scalaMinorVersion",
-      version := "0.1.0-SNAPSHOT"
-    )),
-    name := "datafaker",
-    libraryDependencies ++= Seq(
-      avro4s,
-      scalaTest % Test,
-      scalaCheck % Test
+lazy val core = project.settings(commonSettings: _*)
 
-    )
+lazy val service = project.settings(commonSettings: _*)
+  .dependsOn(core)
+
+lazy val datafaker = (project in file("."))
+  .aggregate(core, service)
+  .settings(
+    publishLocal := {},
+    publish := {}
   )
+
+crossScalaVersions := Seq("2.11.11", "2.12.6")
