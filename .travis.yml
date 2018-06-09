@@ -7,10 +7,10 @@ scala:
    - 2.12.4
 
 script:
-   - sbt clean coverage test coverageReport
+   - sbt +clean +coverage +test +coverageReport
 
 after_success:
-   - sbt coveralls
+   - sbt coverageAggregate coveralls
 notifications:
   email:
     - francisco@fhuertas.com
